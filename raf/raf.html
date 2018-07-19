@@ -1,0 +1,290 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Referral Action Form</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../mcr/css/mcr_style.css">
+        <script src="../mcr/js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div id="entirePage">
+            <div id="flashMessage">
+                <b>Memo copied!</b>
+            </div>
+            <div id='header'>
+                <div id="width10">
+                    <a href="../home.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>        
+                    </a>
+                </div>
+                <div id="width90">
+                    <h1>Referral Action Form</h1>
+                </div>
+            </div>
+
+            <div id="RAFFlexParent">
+                <div class="RAFFlexChild">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    <h4>SF Acct #</h4>
+                    <input type="text" id="SFLast4" placeholder="SF"></input>
+                </div>
+                <div class="RAFFlexChild">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    <h4>RPL Acct #</h4>
+                    <input type="text" id="RPLLast4" placeholder="RPL"></input>
+                </div>
+                <div class="RAFFlexChild">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
+                        <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/>
+                        <path fill="none" d="M0 0h24v24H0z"/>
+                    </svg>
+                    <h4>Request date/time</h4>
+                    <input type="text" id="rqstdate" placeholder="mmddyy hh:mm"></input>
+                </div>
+                <div class="RAFFlexChild">
+                    <div class="FlexReportButton">
+                        <button id="refresh"><img src="../mcr/img/Refresh_icon.png"></button>
+                    </div>
+                </div>
+                <div class="FlexAmount">
+                    <h4>RAF Request</h4>
+                    <textarea name="message" id="textareaRAFRqst"></textarea>
+                </div>
+                <div class="FlexAmount">
+                    <h4>Txn Details</h4>
+                    <textarea name="message" id="textareaTxnDetails"></textarea>
+                </div>
+                <div class="RAFFlexChildrafScenarioButton">
+                    <ul>
+                        <li><button id="frdToVld" class="rafScenarioButton f2vBorder">Fraud to Valid</button></li>
+                        <li><button id='vldToFrd' class="rafScenarioButton v2fBorder">Valid to Fraud</button></li>
+                        <li><button id='notPosted' class="rafScenarioButton">Not Posted</button></li>
+                        <li><button id='prevWorked' class="rafScenarioButton">Prev Worked</button></li>
+                        <!-- <li><button class="rafScenarioButton">Unable to Locate</button></li>
+                        <li><button class="rafScenarioButton">Referred to FPO</button></li> -->
+                        <li><button id='generateMemo' class="rafScenarioButton">Free Form</button></li>
+                        <li><button id='otherMemo' class="rafScenarioButton">Other Memo</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="f2vDiv">
+                <div>
+                    <label>
+                        <input type="radio" name="f2vName" id="taggedVldAdj">
+                        tagged vld w/ adj
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="f2vName" id="manualAdj">
+                        manual adj
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="f2vName" id="rebillAfterFin">
+                        DL approval rebill after finality
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="untaggedRPL">
+                        removed frd tag
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="sentCBRet">
+                        sent dispute return
+                    </label>
+                    <input id="sentCBRetInput" type="text" placeholder="[optional]txn amount"></input>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="movedMCtoRPL">
+                        moved MC to RPL
+                    </label>
+                    <input id="movedMCtoRPLInput" type="text" placeholder="[optional]MC amount"></input>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="noFWIR">
+                        inaccessible in FWIR
+                    </label>
+                </div>
+            </div>
+
+            <div id="v2fDiv">
+                <div>
+                    <label>
+                        <input id="taggedFrdv2f" type="checkbox">
+                        tagged as fraud
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="movedMCtoSF">
+                        moved MC to SF
+                    </label>
+                    <input id="movedMCtoSFInput" type="text" placeholder="[optional]MC amount"></input>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="noFWIR2">
+                        inaccessible in FWIR
+                    </label>
+                </div>
+            </div>
+
+            <div id="notPostedDiv">
+                <div>
+                    <label>
+                        <input id="taggedCORAG"type="checkbox">
+                        tagged CORA G in WFRD
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input id="authN"type="checkbox">
+                        tagged auth N in WFRD
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input id="authPrevValid"type="checkbox">
+                        auth previously tagged as valid
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="noFWIR3">
+                        inaccessible in FWIR
+                    </label>
+                </div>
+            </div>
+
+            <div id="prevWorkedDiv">
+                <div>
+                    <label>
+                        <input type="radio" name="prevWorkedRadio" id="prevWorkedbyCSU">
+                        prev worked by CSU
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="prevWorkedRadio" id="prevWorkedbyRAF">
+                        prev worked by RAF
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="prevWorkedRadio" id="prevWorkedbyRPU">
+                        prev worked by RPU
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="noFWIR4">
+                        inaccessible in FWIR
+                    </label>
+                </div>
+            </div>
+            <div id="generateMemoDiv">
+                <div>
+                    <label>
+                        <input type="checkbox" id="noFWIR5">
+                        inaccessible in FWIR
+                    </label>
+                </div>
+                <div id="txtCenter">
+                    <textarea id='generateMemoTxt' class="textareaAmount"></textarea>
+                </div>
+            </div>
+            <div id="otherMemoDiv">
+                <div>
+                    <label>
+                        <input type="radio" name="otherMemoRadio" id="unableToLocate">
+                        unable to locate txn
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="otherMemoRadio" id="FPOBizCardTOTT">
+                        referred to FPO, BizCard TOTT
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="otherMemoRadio" id="txnOrigRPL">
+                        referred to FPO, txn originated in RPL
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id="noFWIR6">
+                        inaccessible in FWIR
+                    </label>
+                </div>
+            </div>
+    
+            <div id="viewerContainer">
+                <div id="viewer1">
+                    <button id="copyViewer1" onclick="copy1()" type="button">
+                        <span>Copy 1</span>
+                    </button>
+                    <p>SAMPLE CONTENT</p>
+                </div>
+            
+                <div id="viewer2">
+                    <button id="copyViewer2" onclick="copy2()" type="button">
+                        <span>Copy 2</span>
+                    </button>
+                    <p>SAMPLE CONTENT</p>
+                </div>  
+            
+                <div id="viewer3">
+                    <button id="copyViewer3" onclick="copy3()" type="button">
+                        <span>Copy 3</span>
+                    </button>
+                    <p>SAMPLE CONTENT</p>
+                </div>
+
+                <div id="viewer4">
+                    <button id="copyViewer4" onclick="copy4()" type="button">
+                        <span>Copy 4</span>
+                    </button>
+                    <p>SAMPLE CONTENT</p>
+                </div>
+
+                <div id="viewer5">
+                    <button id="copyViewer5" onclick="copy5()" type="button">
+                        <span>Copy 4</span>
+                    </button>
+                    <p>SAMPLE CONTENT</p>
+                </div>
+            </div>
+                
+            <textarea id="viewer1Placeholder" rows="1" cols="1"></textarea>
+            <textarea id="viewer2Placeholder" rows="1" cols="1"></textarea>
+            <textarea id="viewer3Placeholder" rows="1" cols="1"></textarea>
+            <textarea id="viewer4Placeholder" rows="1" cols="1"></textarea>
+            <textarea id="viewer5Placeholder" rows="1" cols="1"></textarea>
+
+
+            <script src="js/raf_variables.js"></script>
+            <script src="js/raf_scenarios.js"></script>
+            <script src="js/raf_functions.js"></script>
+            <script src="../mcr/js/mcr_copy.js"></script>
+        </div>
+    </body>
+</html>

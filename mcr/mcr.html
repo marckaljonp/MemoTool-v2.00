@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Merchant Credit Review</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+    <link href="css/mcr_style.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+
+    <div id='entirePage'>
+        <div id="flashMessage">
+                <b>Memo copied!</b>
+        </div>
+
+        <div id='header'>
+            <div id="width10">
+                <a href="../home.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>        
+                </a>
+            </div>
+            <div id="width90">
+                <h1>Merchant Credit Rvw</h1>
+            </div>
+        </div>
+
+        <div class="FlexParent">
+            <div class="FlexReport">
+                <h4>Report Date</h4>
+                <input type="text" id ="reportDate" placeholder="MM.DD.YY">
+            </div>
+            <div class="FlexReport">
+                <h4>Report Type</h4>
+                <select id="reportType">
+                    <option value="Fraud Match">Fraud Match</option>
+                    <option value="Fraud No Match">Fraud NoMatch</option>
+                    <option value="BizCard Match">BizCard Match</option>
+                    <option value="BizCard No Match">BizCard NoMatch</option>
+                </select>
+            </div>
+            <div class="FlexReportButton">
+                <button id="refresh"><img src="img\Refresh_icon.png"></button>
+            </div>
+            <div class="FlexAmount">
+                <h4>Amount / MC Details</h4>
+                <textarea name="message" id="textareaAmount"></textarea>
+            </div>
+        </div>
+
+        <div class="mcrScenarioButtons">
+            <ul>
+                <li><button id="buttondnm">Do Not Move</button></li>
+                <li><button id="buttonmove">Move</button></li>
+                <li><button id="buttonprev">Prev Worked</button></li>
+            </ul>
+        </div>
+
+        <div id="divdnm">
+            <div>
+                <label><input type="radio" name='disputeRet' id="AllCBReturn">Full Dispute Return</label>
+            </div>
+            <div>
+                <label><input type="radio" name='disputeRet' id="PartialCBReturn">Partial Dispute Ret</label>
+                <input type="text" placeholder=" Partial CB amount" id="PartialCBReturnInput">
+            </div>
+            <hr>
+            <div>
+                <label><input type="radio" name='MC' id="PartialMCRecv">Partial MC Recovery</label>
+                <input type="text" placeholder=" MC applied to txn" id="PartialMCRecvInput">
+            </div>
+            <div>
+                <label><input type="radio" name='MC' id="FullMCRecvWithExcess">Excess MC Return</label>
+                <input type="text" placeholder=" Excess MC amount" id="ExcessMCAmount">
+            </div>
+            <hr>
+            <div>
+                <label><input type="checkbox" id="NoAccessDNM">Unable to access account in FWIR</label>
+            </div>
+        </div>
+
+        <div id="divmove">
+            <div>
+                <label><input type="checkbox" id="ICAdj">IC Reversal</label>
+                <input type="text" placeholder=" IC Adj Amount" id="ICAdjInput">
+            </div>
+            <div>
+                <label><input type="checkbox" id="ManualAdj">Manual Adj SF to RPL</label>
+                <input type="text" placeholder=" RPL Last 4" id="RPLLast4Input">
+                <input type="text" placeholder=" SF Last 4" id="SFLast4Input">
+            </div>
+            <div>
+                <label><input type="checkbox" id="NoAccessMove">Unable to access account in FWIR</label>
+            </div>
+        </div>
+
+        <div id="divprev">
+            <div>
+                <label><input type="checkbox" id="NoAccessPrev">Unable to access account in FWIR</label>
+            </div>
+        </div>
+
+        <div id="viewerContainer">
+            <div id="viewer1">
+            <button id="copyViewer1" onclick="copy1()" type="button"><span>Copy 1</span></button>
+                <p>SAMPLE CONTENT</p>
+            </div>
+        
+            <div id="viewer2">
+            <button id="copyViewer2" onclick="copy2()" type="button"><span>Copy 2</span></button>
+                <p>SAMPLE CONTENT</p>
+            </div>  
+        
+            <div id="viewer3">
+            <button id="copyViewer3" onclick="copy3()" type="button"><span>Copy 3</span></button>
+                <p>SAMPLE CONTENT</p>
+            </div>
+        </div>
+        
+        <textarea id="viewer1Placeholder" rows="1" cols="1"></textarea>
+        <textarea id="viewer2Placeholder" rows="1" cols="1"></textarea>
+        <textarea id="viewer3Placeholder" rows="1" cols="1"></textarea>
+
+        <script src="js/mcr_variables.js"></script>
+        <script src="js/mcr_scenarios.js"></script>
+        <script src="js/mcr_functions.js"></script>
+        <script src="js/mcr_copy.js"></script>
+    </div>
+  </body>
+</html>

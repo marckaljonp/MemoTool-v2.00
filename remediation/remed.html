@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>MCR Remediation</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../mcr/css/mcr_style.css">
+        <script src="../mcr/js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div id="entirePage">
+            <div id="flashMessage">
+                <b>Memo copied!</b>
+            </div>
+            <div id='header'>
+                <div id="width10">
+                    <a href="../home.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>        
+                    </a>
+                </div>
+                <div id="width90">
+                    <h1>MCR Remediation</h1>
+                </div>
+            </div>
+
+            <div class="FlexParentRemed">
+                <div class="FlexAmountRemed">
+                    <h4>Amount / MC Details</h4>
+                </div>
+                <div class="FlexReportButtonRemed">
+                    <button id="refresh"><img src="../mcr/img/Refresh_icon.png"></button>
+                </div>
+                <div class="FlexAmountRemedTextArea">
+                    <textarea name="message" id="textareaAmount"></textarea>
+                </div>
+                <div class="FlexFtag">
+                    <h4>F Tag</h4>
+                </div>
+                <div class="FlexMCRecv">
+                    <h4>MC Recovery</h4>
+                </div>
+            </div>
+        
+            
+            <div class="remedScenarioButtons">
+                <ul>
+                    <li><button id="s1">Removed F tag, took recovery</button></li>
+                    <li><button id="s2">Removed F tag, prev recovered</button></li>
+                    <li><button id="s3">F tag prev removed, took recovery</button></li>
+                    <li><button id="s4">F tag prev removed, prev recovery</button></li>
+                    <li><button id="s5">Previously worked</button></li>
+                    <li><button id="s6">Inaccessible in FWIR</button></li>
+                </ul>
+            </div>
+
+            <div id="divRemedNoFWIR">
+                <div>
+                    <label><input type="radio" name='c3' id="RemovedFTag">Removed F tag in C3</label>
+                </div>
+                <div>
+                    <label><input type="radio" name='c3' id="NoFTagRemoved" checked="checked">No F tag removed in C3</label>
+                </div>
+            </div>
+            
+            <div id="viewerContainer">
+                <div id="viewer1">
+                <button id="copyViewer1" onclick="copy1()" type="button"><span>Copy 1</span></button>
+                    <p>SAMPLE CONTENT</p>
+                </div>
+            
+                <div id="viewer2">
+                <button id="copyViewer2" onclick="copy2()" type="button"><span>Copy 2</span></button>
+                    <p>SAMPLE CONTENT</p>
+                </div>  
+            
+                <div id="viewer3">
+                <button id="copyViewer3" onclick="copy3()" type="button"><span>Copy 3</span></button>
+                    <p>SAMPLE CONTENT</p>
+                </div>
+            </div>
+                
+            <textarea id="viewer1Placeholder" rows="1" cols="1"></textarea>
+            <textarea id="viewer2Placeholder" rows="1" cols="1"></textarea>
+            <textarea id="viewer3Placeholder" rows="1" cols="1"></textarea>
+
+            <script src="../remediation/js/remed_variables.js"></script>
+            <script src="../remediation/js/remed_scenarios.js"></script>
+            <script src="../remediation/js/remed_functions.js"></script>
+            <script src="../mcr/js/mcr_copy.js"></script>
+        </div>
+    </body>
+</html>

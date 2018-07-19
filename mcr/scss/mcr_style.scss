@@ -1,0 +1,317 @@
+@import 'variables',
+        'mixins';
+
+body {
+    margin: 0;
+}
+
+#entirePage {
+    width: 350px;
+    padding-bottom: 700px;
+    background-color: $header-light;
+}
+
+#header {
+    background-color: $header-bgcolor;
+    div {
+        display: inline-block;
+        text-align: center;
+        h1 {
+            font-family: $header-font;
+            font-weight: 100;
+            color: $header-color;
+            margin: 0;
+        }        
+    }
+    #width100 {
+        width: 100%;
+    }
+    #width90 {
+        width: 90%;
+    }
+
+}
+
+.FlexParent {
+    @include flex();
+    padding: 12px 0;
+    .FlexReport {
+        width: 45%;
+        text-align: center;
+        input,
+        select {
+            @include inputAndSelect();
+            width: 90%;
+        }
+    }
+    .FlexReportButton {
+        width: 10%;
+        button {
+            @include refreshButton();
+            float: right;
+        }
+    }
+    .FlexAmount {
+        padding-top: 12px;
+        text-align: center;
+        textarea {
+            @include textareaAmount();
+        }
+    }
+}
+
+h4 {
+    font-family: $header-font;
+    color: $default-font-color;
+    display: inline-block;
+    margin: 0;
+    font-weight: 500;
+}
+
+svg {
+    fill: $header-light;
+}
+
+#flashMessage {
+    position: absolute;
+    width: 350px;
+
+    text-align: center;
+    color: $header-color;
+    background-color: #4caf50;
+    font-family: $header-font;
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#buttondnm {
+    @include leftBorderRadius();
+    border-left: 10px solid lightcoral;
+}
+  
+#buttonmove {
+    @include leftBorderRadius();
+    border-left: 10px solid limegreen;
+}
+  
+#buttonprev {
+    @include leftBorderRadius();
+    border-left: 10px solid khaki;
+}
+
+.mcrScenarioButtons {
+    @include scenarioButtonDimensions();
+    button {
+        @include scenarioButton();
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+#otherMemoDiv,
+#generateMemoDiv,
+#prevWorkedDiv,
+#notPostedDiv,
+#v2fDiv,
+#f2vDiv,
+#divdnm,
+#divmove,
+#divprev,
+#viewerContainer,
+#divRemedNoFWIR {
+    font-family: $header-font;
+    label input{
+        margin: 10px 5px;
+        padding: 0px;
+    }
+    input[type=text]{
+        height: 30px;
+        float: right;
+        border-radius: 5px;
+        border: none;
+        margin-right: 5px;
+    }
+}
+
+#viewerContainer{
+    margin-top: 15px;
+    margin-bottom: 150px;
+    button {
+        @include viewerButton();
+    }
+    p {
+        margin-left: 12.5px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        width: 325px;
+        background-color: lighten($header-bgcolor, 20%);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        word-wrap: break-word;
+    }
+}
+
+#viewer1Placeholder,
+#viewer2Placeholder,
+#viewer3Placeholder,
+#viewer4Placeholder,
+#viewer5Placeholder {
+    background-color: $header-light;
+    border: none;
+}
+
+#reportTypes {
+    
+    width: 92%;
+    margin: 50px auto 0 auto;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+    }
+    button {
+        @include scenarioButton();
+        border: none;
+    }
+}
+
+.FlexParentRemed {
+    @include flex();
+    margin-bottom: 10px;
+    .FlexReportButtonRemed {
+        width: 37.5px;
+        padding-right: 15px;
+        button {
+            @include refreshButton();
+            float: right;
+        }
+    }
+    .FlexAmountRemed {
+        @include flexAmountRemed();
+        width: 277.5px;
+        text-align: left;
+        h4 {
+            padding-left: 20px;
+        }
+    }
+    .FlexAmountRemedTextArea {
+        textarea {
+            @include textareaAmount();
+            margin-top: 10px;
+        }
+    }
+    .FlexFtag {
+        @include flexAmountRemed();
+        padding-left: 15px;
+        text-align: left;
+        width: 160px;
+    }
+    .FlexMCRecv {
+        @include flexAmountRemed();
+        padding-right: 15px;
+        text-align: right;
+        width: 160px;
+    }
+}
+
+.remedScenarioButtons {
+    @include scenarioButtonDimensions();
+
+    button {
+        @include scenarioButton();
+        border-top: none;
+        border-bottom: none;
+    }
+    #s1 {
+        border-left: $border-limegreen;
+        border-right: $border-limegreen;
+    }
+    
+    #s2 {
+        border-left: $border-limegreen;
+        border-right: $border-lightcoral;
+    }
+    
+    #s3 {
+        border-left: $border-lightcoral;
+        border-right: $border-limegreen;
+    }
+    
+    #s4 {
+        border-left: $border-lightcoral;
+        border-right: $border-lightcoral;
+    }
+    #s5,
+    #s6 {
+        border: none;
+    }
+}
+
+#RAFFlexParent {
+    width: 95%;
+    margin: auto;
+    svg {
+        fill: darken($header-light, 20%);
+    }
+    .RAFFlexChild {
+        margin-top: 7px;
+        width: 49.3%;
+        display: inline-block;
+        text-align: center;
+    }
+    .FlexAmount {
+        margin-top: 7px;
+        text-align: center;
+    }
+    textarea{
+        @include textareaAmount();
+    }
+    input {
+        @include inputAndSelect();
+        width: 160px;
+        font-style: $header-font;
+    }
+    #refresh {
+        @include refreshButton();
+    }
+    .RAFFlexChildrafScenarioButton {
+        margin: auto;
+        list-style-type: none;
+    }
+    ul {
+        padding: 0;
+        margin: 15px 0 0 0;
+    }
+    li {
+        list-style-type: none;
+        display: inline;
+    }
+    .rafScenarioButton {
+        @include scenarioButton();
+        width: 49%;
+        border: none;
+    }
+    .f2vBorder {
+        @include leftBorderRadius();
+        border-left: 10px solid limegreen;
+    }
+    .v2fBorder {
+        @include leftBorderRadius();
+        border-left: 10px solid lightcoral;
+    }
+    
+}
+
+#generateMemoDiv {
+    #txtCenter {
+        text-align: center;
+    }
+    textarea{
+        @include textareaAmount();
+        margin: auto;
+    }
+}

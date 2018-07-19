@@ -1,0 +1,403 @@
+body {
+  margin: 0; }
+
+#entirePage {
+  width: 350px;
+  padding-bottom: 700px;
+  background-color: #8eacbb; }
+
+#header {
+  background-color: #34515e; }
+  #header div {
+    display: inline-block;
+    text-align: center; }
+    #header div h1 {
+      font-family: "Roboto", sans-serif;
+      font-weight: 100;
+      color: white;
+      margin: 0; }
+  #header #width100 {
+    width: 100%; }
+  #header #width90 {
+    width: 90%; }
+
+.FlexParent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 12px 0; }
+  .FlexParent .FlexReport {
+    width: 45%;
+    text-align: center; }
+    .FlexParent .FlexReport input,
+    .FlexParent .FlexReport select {
+      padding: 7px;
+      border-radius: 5px;
+      border: none;
+      width: 90%; }
+  .FlexParent .FlexReportButton {
+    width: 10%; }
+    .FlexParent .FlexReportButton button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-color: mediumseagreen;
+      margin-top: 9.5px;
+      border: 3px solid #34515e;
+      float: right; }
+      .FlexParent .FlexReportButton button img {
+        width: 30px;
+        height: 30px; }
+      .FlexParent .FlexReportButton button:focus {
+        outline: none; }
+      .FlexParent .FlexReportButton button:hover {
+        background-color: #2f8d59; }
+  .FlexParent .FlexAmount {
+    padding-top: 12px;
+    text-align: center; }
+    .FlexParent .FlexAmount textarea {
+      min-width: 332.5px;
+      max-width: 332.5px;
+      min-height: 50px;
+      height: 70px;
+      border-radius: 5px;
+      border: none; }
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  color: #263238;
+  display: inline-block;
+  margin: 0;
+  font-weight: 500; }
+
+svg {
+  fill: #8eacbb; }
+
+#flashMessage {
+  position: absolute;
+  width: 350px;
+  text-align: center;
+  color: white;
+  background-color: #4caf50;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+#buttondnm {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-left: 10px solid lightcoral; }
+
+#buttonmove {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-left: 10px solid limegreen; }
+
+#buttonprev {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-left: 10px solid khaki; }
+
+.mcrScenarioButtons {
+  width: 325px;
+  margin: 0 auto; }
+  .mcrScenarioButtons ul {
+    margin: 0;
+    padding: 0; }
+  .mcrScenarioButtons li {
+    list-style-type: none; }
+  .mcrScenarioButtons button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #34515e;
+    color: white;
+    border-top: none;
+    border-right: none;
+    border-bottom: none; }
+    .mcrScenarioButtons button:hover {
+      background-color: #466d7f; }
+
+#otherMemoDiv,
+#generateMemoDiv,
+#prevWorkedDiv,
+#notPostedDiv,
+#v2fDiv,
+#f2vDiv,
+#divdnm,
+#divmove,
+#divprev,
+#viewerContainer,
+#divRemedNoFWIR {
+  font-family: "Roboto", sans-serif; }
+  #otherMemoDiv label input,
+  #generateMemoDiv label input,
+  #prevWorkedDiv label input,
+  #notPostedDiv label input,
+  #v2fDiv label input,
+  #f2vDiv label input,
+  #divdnm label input,
+  #divmove label input,
+  #divprev label input,
+  #viewerContainer label input,
+  #divRemedNoFWIR label input {
+    margin: 10px 5px;
+    padding: 0px; }
+  #otherMemoDiv input[type=text],
+  #generateMemoDiv input[type=text],
+  #prevWorkedDiv input[type=text],
+  #notPostedDiv input[type=text],
+  #v2fDiv input[type=text],
+  #f2vDiv input[type=text],
+  #divdnm input[type=text],
+  #divmove input[type=text],
+  #divprev input[type=text],
+  #viewerContainer input[type=text],
+  #divRemedNoFWIR input[type=text] {
+    height: 30px;
+    float: right;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px; }
+
+#viewerContainer {
+  margin-top: 15px;
+  margin-bottom: 150px; }
+  #viewerContainer button {
+    margin-bottom: 0;
+    margin-left: 12.5px;
+    width: 325px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #34515e;
+    color: white; }
+    #viewerContainer button:hover {
+      background-color: #466d7f; }
+  #viewerContainer p {
+    margin-left: 12.5px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    width: 325px;
+    background-color: #588aa0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    word-wrap: break-word; }
+
+#viewer1Placeholder,
+#viewer2Placeholder,
+#viewer3Placeholder,
+#viewer4Placeholder,
+#viewer5Placeholder {
+  background-color: #8eacbb;
+  border: none; }
+
+#reportTypes {
+  width: 92%;
+  margin: 50px auto 0 auto; }
+  #reportTypes ul {
+    margin: 0;
+    padding: 0; }
+  #reportTypes li {
+    list-style-type: none; }
+  #reportTypes button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #34515e;
+    color: white;
+    border: none; }
+    #reportTypes button:hover {
+      background-color: #466d7f; }
+
+.FlexParentRemed {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 10px; }
+  .FlexParentRemed .FlexReportButtonRemed {
+    width: 37.5px;
+    padding-right: 15px; }
+    .FlexParentRemed .FlexReportButtonRemed button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      border-radius: 50%;
+      background-color: mediumseagreen;
+      margin-top: 9.5px;
+      border: 3px solid #34515e;
+      float: right; }
+      .FlexParentRemed .FlexReportButtonRemed button img {
+        width: 30px;
+        height: 30px; }
+      .FlexParentRemed .FlexReportButtonRemed button:focus {
+        outline: none; }
+      .FlexParentRemed .FlexReportButtonRemed button:hover {
+        background-color: #2f8d59; }
+  .FlexParentRemed .FlexAmountRemed {
+    padding-top: 12px;
+    align-self: flex-end;
+    width: 277.5px;
+    text-align: left; }
+    .FlexParentRemed .FlexAmountRemed h4 {
+      padding-left: 20px; }
+  .FlexParentRemed .FlexAmountRemedTextArea textarea {
+    min-width: 332.5px;
+    max-width: 332.5px;
+    min-height: 50px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px; }
+  .FlexParentRemed .FlexFtag {
+    padding-top: 12px;
+    align-self: flex-end;
+    padding-left: 15px;
+    text-align: left;
+    width: 160px; }
+  .FlexParentRemed .FlexMCRecv {
+    padding-top: 12px;
+    align-self: flex-end;
+    padding-right: 15px;
+    text-align: right;
+    width: 160px; }
+
+.remedScenarioButtons {
+  width: 325px;
+  margin: 0 auto; }
+  .remedScenarioButtons ul {
+    margin: 0;
+    padding: 0; }
+  .remedScenarioButtons li {
+    list-style-type: none; }
+  .remedScenarioButtons button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #34515e;
+    color: white;
+    border-top: none;
+    border-bottom: none; }
+    .remedScenarioButtons button:hover {
+      background-color: #466d7f; }
+  .remedScenarioButtons #s1 {
+    border-left: 10px solid limegreen;
+    border-right: 10px solid limegreen; }
+  .remedScenarioButtons #s2 {
+    border-left: 10px solid limegreen;
+    border-right: 10px solid lightcoral; }
+  .remedScenarioButtons #s3 {
+    border-left: 10px solid lightcoral;
+    border-right: 10px solid limegreen; }
+  .remedScenarioButtons #s4 {
+    border-left: 10px solid lightcoral;
+    border-right: 10px solid lightcoral; }
+  .remedScenarioButtons #s5,
+  .remedScenarioButtons #s6 {
+    border: none; }
+
+#RAFFlexParent {
+  width: 95%;
+  margin: auto; }
+  #RAFFlexParent svg {
+    fill: #557b8e; }
+  #RAFFlexParent .RAFFlexChild {
+    margin-top: 7px;
+    width: 49.3%;
+    display: inline-block;
+    text-align: center; }
+  #RAFFlexParent .FlexAmount {
+    margin-top: 7px;
+    text-align: center; }
+  #RAFFlexParent textarea {
+    min-width: 332.5px;
+    max-width: 332.5px;
+    min-height: 50px;
+    height: 70px;
+    border-radius: 5px;
+    border: none; }
+  #RAFFlexParent input {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    width: 160px;
+    font-style: "Roboto", sans-serif; }
+  #RAFFlexParent #refresh {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    background-color: mediumseagreen;
+    margin-top: 9.5px;
+    border: 3px solid #34515e; }
+    #RAFFlexParent #refresh img {
+      width: 30px;
+      height: 30px; }
+    #RAFFlexParent #refresh:focus {
+      outline: none; }
+    #RAFFlexParent #refresh:hover {
+      background-color: #2f8d59; }
+  #RAFFlexParent .RAFFlexChildrafScenarioButton {
+    margin: auto;
+    list-style-type: none; }
+  #RAFFlexParent ul {
+    padding: 0;
+    margin: 15px 0 0 0; }
+  #RAFFlexParent li {
+    list-style-type: none;
+    display: inline; }
+  #RAFFlexParent .rafScenarioButton {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #34515e;
+    color: white;
+    width: 49%;
+    border: none; }
+    #RAFFlexParent .rafScenarioButton:hover {
+      background-color: #466d7f; }
+  #RAFFlexParent .f2vBorder {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 10px solid limegreen; }
+  #RAFFlexParent .v2fBorder {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 10px solid lightcoral; }
+
+#generateMemoDiv #txtCenter {
+  text-align: center; }
+#generateMemoDiv textarea {
+  min-width: 332.5px;
+  max-width: 332.5px;
+  min-height: 50px;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+  margin: auto; }
+
+/*# sourceMappingURL=mcr_style.css.map */

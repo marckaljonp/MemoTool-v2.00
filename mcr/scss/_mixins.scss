@@ -1,0 +1,108 @@
+@mixin leftBorderRadius() {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    @content
+}
+
+@mixin refreshButton() {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    background-color: mediumseagreen;
+    margin-top: 9.5px;
+    border: 3px solid $header-bgcolor;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: darken(mediumseagreen, 10%);
+    }
+}
+
+@mixin scenarioButton() {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    font-weight: 300;
+    font-family: $header-font;
+    font-size: 17px;
+
+    background-color: $header-bgcolor;
+    color: $header-color;
+
+    &:hover {
+        background-color: lighten($header-bgcolor, 10%); 
+    }
+    @content;
+}
+
+@mixin scenarioButtonDimensions() {
+    width: 325px;
+    margin: 0 auto;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+    }
+}
+
+@mixin viewerButton() {
+    margin-bottom: 0;
+    margin-left: 12.5px;
+    width: 325px;
+
+    border: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    font-weight: 300;
+    font-family: $header-font;
+    font-size: 17px;
+
+    background-color: $header-bgcolor;
+    color: $header-color;
+
+    &:hover {
+        background-color: lighten($header-bgcolor, 10%); 
+    }
+}
+
+@mixin textareaAmount() {
+    min-width: 332.5px;
+    max-width: 332.5px;
+    min-height: 50px;
+    height: 70px;
+    border-radius: 5px;
+    border: none;
+    @content;
+}
+
+@mixin flexAmountRemed() {
+    padding-top: 12px;
+    align-self: flex-end;
+    @content;
+}
+
+@mixin inputAndSelect() {
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    @content;
+}
+
+@mixin flex() {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    @content;
+}
