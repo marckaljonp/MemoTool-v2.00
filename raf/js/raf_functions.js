@@ -50,21 +50,21 @@ function getLast4(last4) {
 function intro() {
     // intro
 
-    memo = `MCHSPT//<REPORT TYPE HERE>`
+    memo = `MCHSPT//`
 
     // SF or RPL last 4
 
-    if (SFLast4.value != '') {
-        memo +=`//SF ${getLast4(SFLast4)}`;
-    } else if (RPLLast4.value != '') {
-        memo +=`//RPL ${getLast4(RPLLast4)}`;
-    }
+    // if (SFLast4.value != '') {
+    //     memo +=`//SF ${getLast4(SFLast4)}`;
+    // } else if (RPLLast4.value != '') {
+    //     memo +=`//RPL ${getLast4(RPLLast4)}`;
+    // }
 
     // per request & request details
     if (rqstdate.value != '' && textareaRAFRqst.value != '') {
-        memo +=`//referral on ${rqstdate.value} states, '${textareaRAFRqst.value}'`;
+        memo +=`${rqstdate.value} ${textareaRAFRqst.value}'`;
     } else if (rqstdate.value == '' && textareaRAFRqst.value != '') {
-        memo +=`//referral states, '${textareaRAFRqst.value}'`;
+        memo +=`${textareaRAFRqst.value}`;
     } else if (rqstdate.value == '' && textareaRAFRqst.value == '') {
         memo += ``;
     } else if (rqstdate.value != '' && textareaRAFRqst.value == '') {
