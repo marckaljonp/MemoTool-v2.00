@@ -50,7 +50,7 @@ function getLast4(last4) {
 function intro() {
     // intro
 
-    memo = `MCHSPT//RAF`
+    memo = `MCHSPT//<REPORT TYPE HERE>`
 
     // SF or RPL last 4
 
@@ -225,7 +225,7 @@ function workvldToFrd() {
         memo += `//`;
     }
 
-    memo += `vld to frd manual adj debit SF${getLast4(SFLast4)} credit RPL${getLast4(RPLLast4)}, fee calc T`
+    memo += `DEBIT SF${getLast4(SFLast4)} CREDIT RPL${getLast4(RPLLast4)}, fee calc T`
 
     if (taggedFrdv2f.checked == true) {
         memo += `//added frd tag`;
